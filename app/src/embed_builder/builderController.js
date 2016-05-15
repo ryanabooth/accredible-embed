@@ -8,10 +8,7 @@
  * Controller of the accredibleEmbedApp
  */
 angular.module('accredibleEmbedApp')
-  .controller('BuilderCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('BuilderCtrl', ['$scope', 'certificate',
+  	function ($scope, certificate) {
+  		$scope.certificate = certificate;
+  }]);

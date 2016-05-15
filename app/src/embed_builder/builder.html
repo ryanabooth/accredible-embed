@@ -1,8 +1,25 @@
-<div class="col-sm-6">
-	<form name="embedOptionsForm">
-
-	</form>
-</div>
-<div class="col-sm-6" style="border: 1px #EEE solid; border-radius: 4px;">
-	<div ng-bind-html="embedCode"></div>
+<form name="embedOptionsForm">
+	<div class="row">
+		<div class="col-sm-6">
+			<label>Certificate ID:</label>
+			<p>{{certificate.id}}</p>
+			<label>Name:</label>
+			<p>{{certificate.name}}</p>
+			<label>Recipient Name:</label>
+			<p>{{certificate.recipient.name}}</p>
+		</div>
+		<div class="col-sm-6">
+			<label>Description:</label>
+			<p>{{certificate.description}}</p>
+			<label>Course Link:</label>
+			<p>{{certificate.course_link}}</p>
+			<label>Issuer Name:</label>
+			<p><a ng-href="{{certificate.issuer.url}}">{{certificate.issuer.name}}</a></p>
+		</div>
+	</div>
+</form>
+<div class="row">
+	<div class="col-sm-12" style="border: 1px #EEE solid; border-radius: 4px;">
+		<div ng-bind-html="embedCode"></div>
+	</div>
 </div>

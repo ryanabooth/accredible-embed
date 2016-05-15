@@ -4,9 +4,14 @@ angular
   .module('accredibleEmbedApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/:id', {
         templateUrl: 'src/embed_builder/builder.html',
-        controller: 'BuilderCtrl'
+        controller: 'BuilderCtrl',
+        resolve: {
+          certificate: ['certificateService', function (certificateService) {
+            return certificateService.getCertificate();
+          }]
+        }
       })
       .otherwise({
         redirectTo: '/'
