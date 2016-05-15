@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name accredibleEmbedApp.controller:MainCtrl
+ * @name accredibleEmbedApp.controller:BuilderCtrl
  * @description
- * # MainCtrl
+ * # BuilderCtrl
  * Controller of the accredibleEmbedApp
  */
 angular.module('accredibleEmbedApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('BuilderCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
