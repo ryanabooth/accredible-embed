@@ -1,16 +1,16 @@
 <form name="embedOptionsForm">
 	<div class="row">
 		<div class="col-sm-6">
-			<label>Certificate ID:</label>
-			<p>{{certificate.id}}</p>
-			<label>Name:</label>
-			<p>{{certificate.name}}</p>
-			<label>Recipient Name:</label>
-			<p>{{certificate.recipient.name}}</p>
+			<div><label>Certificate ID:</label> {{certificate.id}}</div>
+			<div><label>Name:</label> {{certificate.name}}</div>
+			<label>Preview Image:</label>
+			<div><img width="200px" height="150px" ng-src="https://s3.amazonaws.com/staging_accredible_api_mails/{{certificate.id}}" /></div>
 		</div>
 		<div class="col-sm-6">
 			<label>Description:</label>
 			<p>{{certificate.description}}</p>
+			<label>Recipient Name:</label>
+			<p>{{certificate.recipient.name}}</p>
 			<label>Course Link:</label>
 			<p>{{certificate.course_link}}</p>
 			<label>Issuer Name:</label>
